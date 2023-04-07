@@ -22,7 +22,7 @@ jobs:
       run: |
         sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         sudo chmod a+rx /usr/local/bin/yt-dlp
-   
+###############################################################################################################   
 #鏡新聞
     - name: Get mnews.m3u8
       run: |
@@ -43,8 +43,49 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(yt-dlp --print urls https://www.youtube.com/@HungerGames123/live)
         EOL
-        
+#歡喜玉玲龍
+    - name: Get Yulinglong.m3u8
+      run: |
+        touch ./Yulinglong.m3u8
+        sudo cat >./Yulinglong.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@ctvent_classic/live)
+        EOL
+#寰宇新聞台1
+    - name: Get globalnewstw1.m3u8
+      run: |
+        touch ./globalnewstw1.m3u8
+        sudo cat >./globalnewstw1.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@globalnewstw/live)
+        EOL   
+#寰宇新聞台2
+    - name: Get globalnewstw2.m3u8
+      run: |
+        touch ./globalnewstw2.m3u8
+        sudo cat >./globalnewstw2.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/watch?v=B7Zp3d6xXWw)
+        EOL  
+#天才衝衝衝
+    - name: Get genius_rush_rush.m3u8
+      run: |
+        touch ./genius_rush_rush.m3u8
+        sudo cat >./genius_rush_rush.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@CTSSHOW/live)
+        EOL 
 
+
+############################################################################################################
     - name: git add
       run: |
         git add -A
