@@ -83,6 +83,17 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(yt-dlp --print urls https://www.youtube.com/@CTSSHOW/live)
         EOL 
+#我們這一家
+    - name: Get Our_family.m3u8
+      run: |
+        touch ./Our_family.m3u8
+        sudo cat >./Our_family.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/watch?v=UK81GCw1KE8)
+        EOL 
+
 
 
 ############################################################################################################
