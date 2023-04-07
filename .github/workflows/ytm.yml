@@ -83,18 +83,86 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(yt-dlp --print urls https://www.youtube.com/@CTSSHOW/live)
         EOL
-#test
-    - name: Get test.m3u8
+#綜藝玩很大
+    - name: Get Mr_Player.m3u8
       run: |
-        touch ./test.m3u8
-        sudo cat >./test.m3u8 <<EOL
+        touch ./Mr_Player.m3u8
+        sudo cat >./Mr_Player.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/watch?v=UK81GCw1KE8)
+        $(yt-dlp --print urls https://www.youtube.com/@Mr.Player/live)
         EOL
-
-
+#57東森財經新聞
+    - name: Get 57EBC.m3u8
+      run: |
+        touch ./57EBC.m3u8
+        sudo cat >./57EBC.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@57ETFN/live)
+        EOL
+#三立新聞台
+    - name: Get setnews.m3u8
+      run: |
+        touch ./setnews.m3u8
+        sudo cat >./setnews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@setnews/live)
+        EOL
+#三立inews
+    - name: Get setinews.m3u8
+      run: |
+        touch ./setinews.m3u8
+        sudo cat >./setinews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@setinews/live)
+        EOL
+#華視新聞 CH52
+    - name: Get CtsTw.m3u8
+      run: |
+        touch ./CtsTw.m3u8
+        sudo cat >./CtsTw.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@CtsTw/live)
+        EOL
+#民視新聞
+    - name: Get FTV_News.m3u8
+      run: |
+        touch ./FTV_News.m3u8
+        sudo cat >./FTV_News.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@FTV_News/live)
+        EOL
+#台視新聞
+    - name: Get TTV_NEWS.m3u8
+      run: |
+        touch ./TTV_NEWS.m3u8
+        sudo cat >./TTV_NEWS.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@TTV_NEWS/live)
+        EOL
+#公視
+    - name: Get ptslivestream.m3u8
+      run: |
+        touch ./ptslivestream.m3u8
+        sudo cat >./ptslivestream.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@ptslivestream/live)
+        EOL
 
 
 
