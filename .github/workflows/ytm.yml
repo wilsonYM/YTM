@@ -157,11 +157,11 @@ jobs:
     - name: Get ptslivestream.m3u8
       run: |
         touch ./ptslivestream.m3u8
-        sudo cat >./ptslivestream.m3u8 <<EOL
+        sudo cat >./ptslivestream.m3u8 <<EOLa
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --proxy socks4://220.135.176.95:4153 --print urls https://www.youtube.com/@ptslivestream/live)
+        $(yt-dlp --proxy socks4://210.61.216.66:33990 --print urls https://www.youtube.com/@ptslivestream/live)
         EOL
 
 
