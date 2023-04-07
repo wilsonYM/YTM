@@ -161,7 +161,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@ptslivestream/live)
+        $(yt-dlp --proxy socks4://220.135.176.95:4153 --print urls https://www.youtube.com/@ptslivestream/live)
         EOL
 
 
