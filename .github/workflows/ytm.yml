@@ -131,7 +131,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@CtsTw/live)
+        $(yt-dlp --proxy SOCKS4://111.253.129.118:4145 -g https://www.youtube.com/@CtsTw/live)
         EOL
 #民視新聞
     - name: Get FTV_News.m3u8
@@ -161,7 +161,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --proxy socks4://210.61.216.66:33990 --print urls https://www.youtube.com/@ptslivestream/live)
+        $(yt-dlp --proxy SOCKS4://111.253.129.118:4145 -g https://www.youtube.com/@ptslivestream/live)
         EOL
 
 
