@@ -20,7 +20,7 @@ jobs:
         git config --global user.name "GitHub Action"
     - name: Install yt-dlp
       run: |
-        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/download/2023.03.04/yt-dlp -o /usr/local/bin/yt-dlp
         sudo chmod a+rx /usr/local/bin/yt-dlp
 ###############################################################################################################   
 #鏡新聞
