@@ -123,7 +123,7 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(yt-dlp --print urls https://www.youtube.com/@setinews/live)
         EOL
-#華視新聞 CH52X
+#華視新聞 CH52
     - name: Get CtsTw.m3u8
       run: |
         touch ./CtsTw.m3u8
@@ -163,6 +163,17 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(yt-dlp --proxy SOCKS5://jdes6209:EgXe53xPNF@74.120.123.83:50101 -g https://www.youtube.com/@ptslivestream/live)
         EOL
+#我們這一家
+    - name: Get Our_family.m3u8
+      run: |
+        touch ./Our_family.m3u8
+        sudo cat >./Our_family.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp -f b --proxy SOCKS5://jdes6209:EgXe53xPNF@74.120.123.83:50101 -g https://www.youtube.com/watch?v=UK81GCw1KE8)
+        EOL
+
 
 
 
