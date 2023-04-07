@@ -157,7 +157,7 @@ jobs:
     - name: Get ptslivestream.m3u8
       run: |
         touch ./ptslivestream.m3u8
-        sudo cat >./ptslivestream.m3u8 <<EOLa
+        sudo cat >./ptslivestream.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
