@@ -141,7 +141,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@FTV_News/live)
+        $(yt-dlp -g https://www.youtube.com/@FTV_News/live)
         EOL
 #台視新聞
     - name: Get TTV_NEWS.m3u8
