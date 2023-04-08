@@ -1,4 +1,4 @@
 #EXTM3U
 #EXT-X-VERSION:3
-#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-https://d1--ov-gotcha105.bilivideo.com/live-bvc/706711/live_319266642_7136668.m3u8?expires=1680966839&len=0&oi=346785584&pt=web&qn=10000&trid=10038448ac021fbe4981b0988dfc2be5bc53&sigparams=cdn,expires,len,oi,pt,qn,trid&cdn=ov-gotcha105&sign=991f1975e843392d6231f15649adcfc7&sk=252445ccdc048c9924456563f7bd3629&p2p_type=0&sl=1&free_type=0&mid=0&pp=rtmp&source=onetier&trace=0&site=08d88e84e832d9fa63f49d1a6d953d41&order=1
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=10000
+https://d1--ov-gotcha105.bilivideo.com/live-bvc/668938/live_319266642_7136668.m3u8?expires=1680969757&len=0&oi=224110080&pt=web&qn=10000&trid=10030caab04d66114253abcc028deb02bd6d&sigparams=cdn,expires,len,oi,pt,qn,trid&cdn=ov-gotcha105&sign=35522520379cdecefead83bd5bc2d26f&sk=252445ccdc048c9924456563f7bd3629&p2p_type=0&sl=1&free_type=0&mid=0&pp=rtmp&source=onetier&trace=0&site=7e7f54b8f02fc23dfcf0afbda17c6c5b&order=1
