@@ -173,7 +173,17 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(yt-dlp --proxy SOCKS5://jdes6209:EgXe53xPNF@181.215.45.238:50101 -g https://www.youtube.com/watch?v=UK81GCw1KE8)
         EOL
-
+####bilbil
+    - name: Get test.m3u8
+      run: |
+        touch ./test.m3u8
+        sudo cat >./test.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(python3 ./bilibili.py)
+        $(26329057)
+        EOL
 
 
 
