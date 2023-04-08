@@ -1,0 +1,4 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+https://d1--ov-gotcha105.bilivideo.com/live-bvc/569760/live_319266642_7136668.m3u8?expires=1680977516&len=0&oi=2897335640&pt=web&qn=10000&trid=10031251a4c164124e4c83f8feaf095540c6&sigparams=cdn,expires,len,oi,pt,qn,trid&cdn=ov-gotcha105&sign=6caac2712e4f43513e80301ca7926f64&sk=252445ccdc048c9924456563f7bd3629&p2p_type=0&sl=1&free_type=0&mid=0&pp=rtmp&source=onetier&trace=0&site=4752f73286243b9ccef1c4144a1e4511&order=1
