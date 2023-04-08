@@ -7,7 +7,6 @@ import sys
 import execjs
 import requests
 ####################由命令列輸入########
-import requests
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('echo')     # add_argument()指定程序可以接受的命令行选项

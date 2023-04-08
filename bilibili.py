@@ -4,11 +4,7 @@
 # qn=400蓝光
 # qn=10000原画
 import requests
-import argparse
-parser = argparse.ArgumentParser()
-parser.add_argument('echo')     # add_argument()指定程序可以接受的命令行选项
-args = parser.parse_args()      # parse_args()从指定的选项中返回一些数据
-
+import sys
 
 class BiliBili:
 
@@ -30,11 +26,11 @@ class BiliBili:
         }
         with requests.Session() as self.s:
             res = self.s.get(r_url, headers=self.header, params=param).json()
-        if res['msg'] == '不存在':
-            return {}
+        if res['msg'] == '直播间不存在':
+            raise Exception(f'bilibili {rid} {res["msg"]}')
         live_status = res['data']['live_status']
         if live_status != 1:
-            return {}
+            raise Exception(f'bilibili {rid} 未开播')
         self.real_room_id = res['data']['room_id']
 
     def get_real_url(self, current_qn: int = 10000) -> dict:
@@ -49,6 +45,7 @@ class BiliBili:
             'ptype': 8,
         }
         res = self.s.get(url, headers=self.header, params=param).json()
+        
         stream_info = res['data']['playurl_info']['playurl']['stream']
         qn_max = 0
 
@@ -66,14 +63,16 @@ class BiliBili:
         for data in stream_info:
             format_name = data['format'][0]['format_name']
             if format_name == 'ts':
+                #print(data['format'][-1])
                 base_url = data['format'][-1]['codec'][0]['base_url']
                 url_info = data['format'][-1]['codec'][0]['url_info']
                 for i, info in enumerate(url_info):
                     host = info['host']
                     extra = info['extra']
-                    stream_urls = f'{host}{base_url}{extra}'
+                    stream_urls[f'url{i + 1}'] = f'{host}{base_url}{extra}'
                 break
-        return stream_urls
+        stream_urls['uid']=res['data']['uid']
+        return stream_urls["url1"]
 
 
 def get_real_url(rid):
@@ -86,5 +85,8 @@ def get_real_url(rid):
 
 
 if __name__ == '__main__':
-    r = args.echo
+    try:
+        r=sys.argv[1]
+    except:
+        r = input('请输入bilibili直播房间号：\n')
     print(get_real_url(r))
