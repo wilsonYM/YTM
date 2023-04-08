@@ -4,6 +4,10 @@
 # qn=400蓝光
 # qn=10000原画
 import requests
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument('echo')     # add_argument()指定程序可以接受的命令行选项
+args = parser.parse_args()      # parse_args()从指定的选项中返回一些数据
 
 
 class BiliBili:
@@ -82,5 +86,5 @@ def get_real_url(rid):
 
 
 if __name__ == '__main__':
-    r = input()
+    r = args.echo
     print(get_real_url(r))
