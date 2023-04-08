@@ -6,12 +6,7 @@ import time
 import sys
 import execjs
 import requests
-####################由命令列輸入########
-import argparse
-parser = argparse.ArgumentParser()
-parser.add_argument('echo')     # add_argument()指定程序可以接受的命令行选项
-args = parser.parse_args()      # parse_args()从指定的选项中返回一些数据
-############################################
+
 
 class DouYu:
     """
@@ -152,7 +147,7 @@ if __name__ == '__main__':
         try:
             r=sys.argv[1]
         except:
-            r = args.echo
+            r = input('输入斗鱼直播间号：\n')
 
         s = DouYu(r)
         res=s.get_real_url()
