@@ -30,11 +30,11 @@ class BiliBili:
         }
         with requests.Session() as self.s:
             res = self.s.get(r_url, headers=self.header, params=param).json()
-        if res['msg'] == '直播间不存在':
-            raise Exception(f'bilibili {rid} {res["msg"]}')
+        if res['msg'] == '不存在':
+            return {}
         live_status = res['data']['live_status']
         if live_status != 1:
-            raise Exception(f'bilibili {rid} 未开播')
+            return {}
         self.real_room_id = res['data']['room_id']
 
     def get_real_url(self, current_qn: int = 10000) -> dict:
