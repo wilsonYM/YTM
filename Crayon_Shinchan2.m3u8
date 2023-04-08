@@ -1,4 +1,4 @@
 #EXTM3U
 #EXT-X-VERSION:3
-#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=737777
 https://d1--ov-gotcha105.bilivideo.com/live-bvc/917335/live_415611_4082642_bluray.m3u8?expires=1680962478&len=0&oi=2897346384&pt=h5&qn=10000&trid=10037ff95fe3d0aa44e18daca7a65dab2b7f&sigparams=cdn,expires,len,oi,pt,qn,trid&cdn=ov-gotcha105&sign=efaede0e03c4affa54e977a27a46cda1&sk=ac2a37bbe48f15abad264ddfed2835a8&p2p_type=0&sl=3&free_type=0&mid=0&pp=rtmp&source=onetier&trace=0&site=2c5af8f0ca1e64fb5d32453c0d1649ef&order=1
