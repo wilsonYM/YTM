@@ -67,7 +67,7 @@ def get_real_url(room_id):
             if obj['url'] is not None:
                 liveline = live(obj['url'])
                 urls['url'+str(i+1)]=liveline
-    return urls
+    return urls["url1"]
 
 
 if __name__ == '__main__':
