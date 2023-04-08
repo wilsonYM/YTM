@@ -193,7 +193,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(python3 ./bilibili.py 10375360)
-        EOL        
+        EOL
 #蠟筆小新3
     - name: Get Crayon_Shinchan3.m3u8
       run: |
@@ -203,7 +203,67 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(python3 ./bilibili.py 26706595)
-        EOL   
+        EOL
+#蠟筆小新4
+    - name: Get Crayon_Shinchan4.m3u8
+      run: |
+        touch ./Crayon_Shinchan4.m3u8
+        sudo cat >./Crayon_Shinchan4.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(python3 ./bilibili.py 27178028)
+        EOL
+#名偵探柯南
+    - name: Get Conan.m3u8
+      run: |
+        touch ./Conan.m3u8
+        sudo cat >./Conan.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(python3 ./bilibili.py 181453)
+        EOL
+#小新多拉A夢小丸子柯南
+    - name: Get more_TV_24.m3u8
+      run: |
+        touch ./more_TV_24.m3u8
+        sudo cat >./more_TV_24.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(python3 ./bilibili.py 21557299)
+        EOL
+#多拉A夢1
+    - name: Get Doraemon1.m3u8
+      run: |
+        touch ./Doraemon1.m3u8
+        sudo cat >./Doraemon1.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(python3 ./bilibili.py 14745943)
+        EOL
+#多拉A夢2
+    - name: Get Doraemon2.m3u8
+      run: |
+        touch ./Doraemon2.m3u8
+        sudo cat >./Doraemon2.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(python3 ./bilibili.py 27383329)
+        EOL
+#多拉A夢3
+    - name: Get Doraemon3.m3u8
+      run: |
+        touch ./Doraemon3.m3u8
+        sudo cat >./Doraemon3.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(python3 ./bilibili.py 27311355)
+        EOL
 
 
 
