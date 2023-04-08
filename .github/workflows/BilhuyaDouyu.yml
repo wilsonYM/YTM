@@ -1,4 +1,4 @@
-name: Get BilBil Live m3u8
+name: Get BilhuyaDouyu Live m3u8
 on:
   schedule:
     - cron: '0 0/2 * * *'
@@ -22,7 +22,9 @@ jobs:
       run: |
         sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         sudo chmod a+rx /usr/local/bin/yt-dlp
-
+    - name: Install PyExecJS
+      run: |
+        pip install PyExecJS
 ############################################bilbil##############################################################
 #蠟筆小新1
     - name: Get Crayon_Shinchan1.m3u8
@@ -114,6 +116,81 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(python3 ./bilibili.py 27311355)
         EOL
+
+
+
+
+############################################################################################################
+############################################huya虎牙##############################################################
+#海蓮寶寶1
+    - name: Get huya_spongebob1.m3u8
+      run: |
+        touch ./huya_spongebob1.m3u8
+        sudo cat >./huya_spongebob1.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(python3 ./huya.py 20301656)
+        EOL
+#海蓮寶寶1
+    - name: Get huya_spongebob2.m3u8
+      run: |
+        touch ./huya_spongebob2.m3u8
+        sudo cat >./huya_spongebob2.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(python3 ./huya.py 19552901)
+        EOL
+
+
+
+
+
+
+
+
+
+
+
+############################################################################################################
+############################################Douyu鬥魚##############################################################
+#名偵探柯南
+    - name: Get douyu_Conan.m3u8
+      run: |
+        touch ./douyu_Conan.m3u8
+        sudo cat >./douyu_Conan.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(python3 ./douyu.py 6484910)
+        EOL
+#running man1
+    - name: Get douyu_running_man1.m3u8
+      run: |
+        touch ./douyu_running_man1.m3u8
+        sudo cat >./douyu_running_man1.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(python3 ./douyu.py 131977)
+        EOL
+#running man2
+    - name: Get douyu_running_man2.m3u8
+      run: |
+        touch ./douyu_running_man2.m3u8
+        sudo cat >./douyu_running_man2.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(python3 ./douyu.py 7298973)
+        EOL
+
+
+
+
+
+
 
 
 
