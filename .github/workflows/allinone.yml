@@ -320,38 +320,38 @@ jobs:
 
 
 
-# ############################################################################################################
-# ############################################Douyu鬥魚##############################################################
-# #名偵探柯南
-#     - name: Get douyu_Conan.m3u8
-#       run: |
-#         touch ./douyu_Conan.m3u8
-#         sudo cat >./douyu_Conan.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(python3 ./douyu.py 6484910)
-#         EOL
-# #running man1
-#     - name: Get douyu_running_man1.m3u8
-#       run: |
-#         touch ./douyu_running_man1.m3u8
-#         sudo cat >./douyu_running_man1.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(python3 ./douyu.py 131977)
-#         EOL
-# #running man2
-#     - name: Get douyu_running_man2.m3u8
-#       run: |
-#         touch ./douyu_running_man2.m3u8
-#         sudo cat >./douyu_running_man2.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(python3 ./douyu.py 7298973)
-#         EOL
+############################################################################################################
+############################################Douyu鬥魚##############################################################
+#名偵探柯南
+    - name: Get douyu_Conan.m3u8
+      run: |
+        touch ./douyu_Conan.m3u8
+        sudo cat >./douyu_Conan.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(python3 ./douyu.py 6484910)
+        EOL
+#running man1
+    - name: Get douyu_running_man1.m3u8
+      run: |
+        touch ./douyu_running_man1.m3u8
+        sudo cat >./douyu_running_man1.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(python3 ./douyu.py 131977)
+        EOL
+#running man2
+    - name: Get douyu_running_man2.m3u8
+      run: |
+        touch ./douyu_running_man2.m3u8
+        sudo cat >./douyu_running_man2.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(python3 ./douyu.py 7298973)
+        EOL
 
 
 
