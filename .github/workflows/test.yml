@@ -44,7 +44,7 @@ jobs:
         華視新聞,$(yt-dlp --proxy SOCKS5://jdes6209:EgXe53xPNF@74.120.123.83:50101 -g https://www.youtube.com/@CtsTw/live)
         民視新聞,$(yt-dlp -g https://www.youtube.com/@FTV_News/live)
         台視新聞,$(yt-dlp -g https://www.youtube.com/@TTV_NEWS/live)
-        公視,$(yt-dlp --proxy SOCKS5://jdes6209:EgXe53xPNF@181.215.45.238:50101 -g https://www.youtube.com/@ptslivestream/live)
+        公視,$(yt-dlp --proxy SOCKS5://jdes6209:EgXe53xPNF@181.215.45.238:50101 -g https://www.youtube.com/watch?v=4Uc00FPs27M)
 
         飢餓遊戲,$(yt-dlp -g https://www.youtube.com/@HungerGames123/live)
         歡喜玉玲龍,$(yt-dlp -g https://www.youtube.com/@ctvent_classic/live)
