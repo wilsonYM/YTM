@@ -44,29 +44,22 @@ jobs:
         華視新聞,$(yt-dlp --proxy SOCKS5://jdes6209:EgXe53xPNF@74.120.123.83:50101 -g https://www.youtube.com/@CtsTw/live)
         民視新聞,$(yt-dlp -g https://www.youtube.com/@FTV_News/live)
         台視新聞,$(yt-dlp -g https://www.youtube.com/@TTV_NEWS/live)
-        公視,$(yt-dlp --proxy SOCKS5://jdes6209:EgXe53xPNF@181.215.45.238:50101 -g https://www.youtube.com/watch?v=4Uc00FPs27M)
-
+        ##
+        綜藝,#genre#
         飢餓遊戲,$(yt-dlp -g https://www.youtube.com/@HungerGames123/live)
         歡喜玉玲龍,$(yt-dlp -g https://www.youtube.com/@ctvent_classic/live)
         天才衝衝衝,$(yt-dlp -g https://www.youtube.com/@CTSSHOW/live)
-        我們這一家,$(yt-dlp --proxy SOCKS5://jdes6209:EgXe53xPNF@181.215.45.238:50101 -g https://www.youtube.com/watch?v=UK81GCw1KE8)
-        綜藝玩很大,$(yt-dlp -g https://www.youtube.com/watch?v=PpCKwiVHCfY)
         ##
-        Bilibili,#genre#
+        卡通,#genre#
         蠟筆小新,$(streamlink --default-stream best --stream-url https://live.bilibili.com/26329057)
         蠟筆小新,$(streamlink --default-stream best --stream-url https://live.bilibili.com/10375360)
         蠟筆小新,$(streamlink --default-stream best --stream-url https://live.bilibili.com/27178028)
         名偵探柯南,$(streamlink --default-stream best --stream-url https://live.bilibili.com/181453)
-        小新多拉A夢小丸子柯南,$(streamlink --default-stream best --stream-url https://live.bilibili.com/21557299)
         多拉A夢,$(streamlink --default-stream best --stream-url https://live.bilibili.com/14745943)
         多拉A夢,$(streamlink --default-stream best --stream-url https://live.bilibili.com/27383329)
         多拉A夢,$(streamlink --default-stream best --stream-url https://live.bilibili.com/27311355)
-        ##
-        虎牙,#genre#
-        海蓮寶寶,$(python3 ./huya.py 20301656)
-        海蓮寶寶,$(python3 ./huya.py 19552901)
-        ##
-        鬥魚,#genre#
+        海蓮寶寶,$(streamlink --default-stream best --stream-url https://www.huya.com/20301656)
+        海蓮寶寶,$(streamlink --default-stream best --stream-url https://www.huya.com/19552901)
         名偵探柯南,$(python3 ./douyu.py 6484910)
         running_man,$(python3 ./douyu.py 131977)
         running_man,$(python3 ./douyu.py 7298973)
