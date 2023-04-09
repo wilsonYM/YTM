@@ -34,8 +34,10 @@ jobs:
       run: |
         touch ./test.txt
         sudo cat >./test.txt
-        鏡新聞,$(yt-dlp --print urls https://www.youtube.com/@mnews-tw/live)
-        飢餓遊戲,$(yt-dlp --print urls https://www.youtube.com/@HungerGames123/live)
+        鏡新聞,
+        $(yt-dlp --print urls https://www.youtube.com/@mnews-tw/live)
+        飢餓遊戲,
+        $(yt-dlp --print urls https://www.youtube.com/@HungerGames123/live)
         EOL
 # #鏡新聞
 #     - name: Get yt_mnews.m3u8
