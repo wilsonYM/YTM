@@ -1,4 +1,4 @@
-name: Get allinone Live m3u8
+name: Get test Live m3u8
 on:
   schedule:
     - cron: '0 0/2 * * *'
