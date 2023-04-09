@@ -34,344 +34,44 @@ jobs:
       run: |
         touch ./test.txt
         sudo cat >./test.txt <<EOL
-        鏡新聞,$(yt-dlp --print urls https://www.youtube.com/@mnews-tw/live)
-        飢餓遊戲,$(yt-dlp --print urls https://www.youtube.com/@HungerGames123/live)
+        新聞,#genre#
+        鏡新聞,$(yt-dlp -g https://www.youtube.com/@mnews-tw/live)
+        寰宇新聞台1,$(yt-dlp -g https://www.youtube.com/@globalnewstw/live)
+        寰宇新聞台2,$(yt-dlp -g https://www.youtube.com/watch?v=B7Zp3d6xXWw)
+        東森財經新聞,$(yt-dlp -g https://www.youtube.com/@57ETFN/live)
+        三立新聞台,$(yt-dlp -g https://www.youtube.com/@setnews/live)
+        三立inews,$(yt-dlp -g https://www.youtube.com/@setinews/live)
+        華視新聞,$(yt-dlp --proxy SOCKS5://jdes6209:EgXe53xPNF@74.120.123.83:50101 -g https://www.youtube.com/@CtsTw/live)
+        民視新聞,$(yt-dlp -g https://www.youtube.com/@FTV_News/live)
+        台視新聞,$(yt-dlp -g https://www.youtube.com/@TTV_NEWS/live)
+        公視,$(yt-dlp --proxy SOCKS5://jdes6209:EgXe53xPNF@181.215.45.238:50101 -g https://www.youtube.com/@ptslivestream/live)
+
+        飢餓遊戲,$(yt-dlp -g https://www.youtube.com/@HungerGames123/live)
+        歡喜玉玲龍,$(yt-dlp -g https://www.youtube.com/@ctvent_classic/live)
+        天才衝衝衝,$(yt-dlp -g https://www.youtube.com/@CTSSHOW/live)
+        我們這一家,$(yt-dlp --proxy SOCKS5://jdes6209:EgXe53xPNF@181.215.45.238:50101 -g https://www.youtube.com/watch?v=UK81GCw1KE8)
+        綜藝玩很大,$(yt-dlp -g https://www.youtube.com/watch?v=PpCKwiVHCfY)
+        ##
+        Bilibili,#genre#
         蠟筆小新,$(streamlink --default-stream best --stream-url https://live.bilibili.com/26329057)
         蠟筆小新,$(streamlink --default-stream best --stream-url https://live.bilibili.com/10375360)
         蠟筆小新,$(streamlink --default-stream best --stream-url https://live.bilibili.com/27178028)
+        名偵探柯南,$(streamlink --default-stream best --stream-url https://live.bilibili.com/181453)
+        小新多拉A夢小丸子柯南,$(streamlink --default-stream best --stream-url https://live.bilibili.com/21557299)
+        多拉A夢,$(streamlink --default-stream best --stream-url https://live.bilibili.com/14745943)
+        多拉A夢,$(streamlink --default-stream best --stream-url https://live.bilibili.com/27383329)
+        多拉A夢,$(streamlink --default-stream best --stream-url https://live.bilibili.com/27311355)
+        ##
+        虎牙,#genre#
+        海蓮寶寶,$(python3 ./huya.py 20301656)
+        海蓮寶寶,$(python3 ./huya.py 19552901)
+        ##
+        鬥魚,#genre#
+        名偵探柯南,$(python3 ./douyu.py 6484910)
+        running_man,$(python3 ./douyu.py 131977)
+        running_man,$(python3 ./douyu.py 7298973)
+        ##
         EOL
-# #鏡新聞
-#     - name: Get yt_mnews.m3u8
-#       run: |
-#         touch ./yt_mnews.m3u8
-#         sudo cat >./yt_mnews.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(yt-dlp --print urls https://www.youtube.com/@mnews-tw/live)
-#         EOL
-# #飢餓遊戲
-#     - name: Get yt_HungerGames.m3u8
-#       run: |
-#         touch ./yt_HungerGames.m3u8
-#         sudo cat >./yt_HungerGames.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(yt-dlp --print urls https://www.youtube.com/@HungerGames123/live)
-#         EOL
-# #歡喜玉玲龍
-#     - name: Get yt_Yulinglong.m3u8
-#       run: |
-#         touch ./yt_Yulinglong.m3u8
-#         sudo cat >./yt_Yulinglong.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(yt-dlp --print urls https://www.youtube.com/@ctvent_classic/live)
-#         EOL
-# #寰宇新聞台1
-#     - name: Get yt_globalnewstw1.m3u8
-#       run: |
-#         touch ./yt_globalnewstw1.m3u8
-#         sudo cat >./yt_globalnewstw1.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(yt-dlp --print urls https://www.youtube.com/@globalnewstw/live)
-#         EOL
-# #寰宇新聞台2
-#     - name: Get yt_globalnewstw2.m3u8
-#       run: |
-#         touch ./yt_globalnewstw2.m3u8
-#         sudo cat >./yt_globalnewstw2.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(yt-dlp --print urls https://www.youtube.com/watch?v=B7Zp3d6xXWw)
-#         EOL
-# #天才衝衝衝
-#     - name: Get yt_genius_rush_rush.m3u8
-#       run: |
-#         touch ./yt_genius_rush_rush.m3u8
-#         sudo cat >./yt_genius_rush_rush.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(yt-dlp --print urls https://www.youtube.com/@CTSSHOW/live)
-#         EOL
-
-# #57東森財經新聞
-#     - name: Get yt_57EBC.m3u8
-#       run: |
-#         touch ./yt_57EBC.m3u8
-#         sudo cat >./yt_57EBC.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(yt-dlp --print urls https://www.youtube.com/@57ETFN/live)
-#         EOL
-# #三立新聞台
-#     - name: Get yt_setnews.m3u8
-#       run: |
-#         touch ./yt_setnews.m3u8
-#         sudo cat >./yt_setnews.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(yt-dlp --print urls https://www.youtube.com/@setnews/live)
-#         EOL
-# #三立inews
-#     - name: Get yt_setinews.m3u8
-#       run: |
-#         touch ./yt_setinews.m3u8
-#         sudo cat >./yt_setinews.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(yt-dlp --print urls https://www.youtube.com/@setinews/live)
-#         EOL
-# #華視新聞 CH52
-#     - name: Get yt_CtsTw.m3u8
-#       run: |
-#         touch ./yt_CtsTw.m3u8
-#         sudo cat >./yt_CtsTw.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(yt-dlp --proxy SOCKS5://jdes6209:EgXe53xPNF@74.120.123.83:50101 -g https://www.youtube.com/@CtsTw/live)
-#         EOL
-# #民視新聞
-#     - name: Get yt_FTV_News.m3u8
-#       run: |
-#         touch ./yt_FTV_News.m3u8
-#         sudo cat >./yt_FTV_News.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(yt-dlp -g https://www.youtube.com/@FTV_News/live)
-#         EOL
-# #台視新聞
-#     - name: Get yt_TTV_NEWS.m3u8
-#       run: |
-#         touch ./yt_TTV_NEWS.m3u8
-#         sudo cat >./yt_TTV_NEWS.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(yt-dlp --print urls https://www.youtube.com/@TTV_NEWS/live)
-#         EOL
-# # #公視X
-# #     - name: Get yt_ptslivestream.m3u8
-# #       run: |
-# #         touch ./yt_ptslivestream.m3u8
-# #         sudo cat >./yt_ptslivestream.m3u8 <<EOL
-# #         #EXTM3U
-# #         #EXT-X-VERSION:3
-# #         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-# #         $(yt-dlp --proxy SOCKS5://jdes6209:EgXe53xPNF@181.215.45.238:50101 -g https://www.youtube.com/@ptslivestream/live)
-# #         EOL
-# # #我們這一家X
-# #     - name: Get yt_Our_family.m3u8
-# #       run: |
-# #         touch ./yt_Our_family.m3u8
-# #         sudo cat >./yt_Our_family.m3u8 <<EOL
-# #         #EXTM3U
-# #         #EXT-X-VERSION:3
-# #         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-# #         $(yt-dlp --proxy SOCKS5://jdes6209:EgXe53xPNF@181.215.45.238:50101 -g https://www.youtube.com/watch?v=UK81GCw1KE8)
-# #         EOL
-# # #綜藝玩很大X
-# #     - name: Get yt_Mr_Player.m3u8
-# #       run: |
-# #         touch ./yt_Mr_Player.m3u8
-# #         sudo cat >./yt_Mr_Player.m3u8 <<EOL
-# #         #EXTM3U
-# #         #EXT-X-VERSION:3
-# #         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-# #         $(yt-dlp --print urls https://www.youtube.com/watch?v=PpCKwiVHCfY)
-# #         EOL
-
-# ############################################################################################################
-# ############################################bilbil##############################################################
-# # #蠟筆小新1s
-# #     - name: Get bilbil_Crayon_Shinchan1.m3u8
-# #       run: |
-# #         touch ./bilbil_Crayon_Shinchan1.m3u8
-# #         sudo cat >./bilbil_Crayon_Shinchan1.m3u8 <<EOL
-# #         #EXTM3U
-# #         #EXT-X-VERSION:3
-# #         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-# #         $(streamlink --default-stream best --stream-url https://live.bilibili.com/26329057)
-# #         EOL
-# #蠟筆小新1
-#     - name: Get bilbil_Crayon_Shinchan1.m3u8
-#       run: |
-#         touch ./bilbil_Crayon_Shinchan1.m3u8
-#         sudo cat >./bilbil_Crayon_Shinchan1.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(python3 ./bilibili.py 26329057)
-#         EOL
-# #蠟筆小新2
-#     - name: Get bilbil_Crayon_Shinchan2.m3u8
-#       run: |
-#         touch ./bilbil_Crayon_Shinchan2.m3u8
-#         sudo cat >./bilbil_Crayon_Shinchan2.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(python3 ./bilibili.py 10375360)
-#         EOL
-# #蠟筆小新3
-#     - name: Get bilbil_Crayon_Shinchan3.m3u8
-#       run: |
-#         touch ./bilbil_Crayon_Shinchan3.m3u8
-#         sudo cat >./bilbil_Crayon_Shinchan3.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(python3 ./bilibili.py 26706595)
-#         EOL
-# #蠟筆小新4
-#     - name: Get bilbil_Crayon_Shinchan4.m3u8
-#       run: |
-#         touch ./bilbil_Crayon_Shinchan4.m3u8
-#         sudo cat >./bilbil_Crayon_Shinchan4.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(python3 ./bilibili.py 27178028)
-#         EOL
-# #名偵探柯南
-#     - name: Get bilbil_Conan.m3u8
-#       run: |
-#         touch ./bilbil_Conan.m3u8
-#         sudo cat >./bilbil_Conan.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(python3 ./bilibili.py 181453)
-#         EOL
-# #小新多拉A夢小丸子柯南
-#     - name: Get bilbil_more_TV_24.m3u8
-#       run: |
-#         touch ./bilbil_more_TV_24.m3u8
-#         sudo cat >./bilbil_more_TV_24.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(python3 ./bilibili.py 21557299)
-#         EOL
-# #多拉A夢1
-#     - name: Get bilbil_Doraemon1.m3u8
-#       run: |
-#         touch ./bilbil_Doraemon1.m3u8
-#         sudo cat >./bilbil_Doraemon1.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(python3 ./bilibili.py 14745943)
-#         EOL
-# #多拉A夢2
-#     - name: Get bilbil_Doraemon2.m3u8
-#       run: |
-#         touch ./bilbil_Doraemon2.m3u8
-#         sudo cat >./bilbil_Doraemon2.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(python3 ./bilibili.py 27383329)
-#         EOL
-# #多拉A夢3
-#     - name: Get bilbil_Doraemon3.m3u8
-#       run: |
-#         touch ./bilbil_Doraemon3.m3u8
-#         sudo cat >./bilbil_Doraemon3.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(python3 ./bilibili.py 27311355)
-#         EOL
-
-
-
-
-# ############################################################################################################
-# ############################################huya虎牙##############################################################
-# #海蓮寶寶1
-#     - name: Get huya_spongebob1.m3u8
-#       run: |
-#         touch ./huya_spongebob1.m3u8
-#         sudo cat >./huya_spongebob1.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(python3 ./huya.py 20301656)
-#         EOL
-# #海蓮寶寶1
-#     - name: Get huya_spongebob2.m3u8
-#       run: |
-#         touch ./huya_spongebob2.m3u8
-#         sudo cat >./huya_spongebob2.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(python3 ./huya.py 19552901)
-#         EOL
-
-
-
-
-
-
-
-
-
-
-
-# ############################################################################################################
-# ############################################Douyu鬥魚##############################################################
-# #名偵探柯南
-#     - name: Get douyu_Conan.m3u8
-#       run: |
-#         touch ./douyu_Conan.m3u8
-#         sudo cat >./douyu_Conan.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(python3 ./douyu.py 6484910)
-#         EOL
-# #running man1
-#     - name: Get douyu_running_man1.m3u8
-#       run: |
-#         touch ./douyu_running_man1.m3u8
-#         sudo cat >./douyu_running_man1.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(python3 ./douyu.py 131977)
-#         EOL
-# #running man2
-#     - name: Get douyu_running_man2.m3u8
-#       run: |
-#         touch ./douyu_running_man2.m3u8
-#         sudo cat >./douyu_running_man2.m3u8 <<EOL
-#         #EXTM3U
-#         #EXT-X-VERSION:3
-#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-#         $(python3 ./douyu.py 7298973)
-#         EOL
-
-
-
-
-
-
-
-
-
 
 ############################################################################################################
     - name: git add
