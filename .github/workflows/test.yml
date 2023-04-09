@@ -25,9 +25,9 @@ jobs:
     - name: Install PyExecJS
       run: |
         pip install PyExecJS
-    # - name: Install streamlink
-    #   run: |
-    #     pip install streamlink
+    - name: Install streamlink
+      run: |
+        pip install streamlink
 #######################################YOUTUBE####################################################   
 #test
     - name: Get test.txt
@@ -36,9 +36,9 @@ jobs:
         sudo cat >./test.txt <<EOL
         鏡新聞,$(yt-dlp --print urls https://www.youtube.com/@mnews-tw/live)
         飢餓遊戲,$(yt-dlp --print urls https://www.youtube.com/@HungerGames123/live)
-        蠟筆小新,$(python3 ./bilibili.py 26329057)
-        蠟筆小新,$(python3 ./bilibili.py 10375360)
-        蠟筆小新,$(python3 ./bilibili.py 27178028)
+        蠟筆小新,$(streamlink --default-stream best --stream-url https://live.bilibili.com/26329057)
+        蠟筆小新,$(streamlink --default-stream best --stream-url https://live.bilibili.com/10375360)
+        蠟筆小新,$(streamlink --default-stream best --stream-url https://live.bilibili.com/27178028)
         EOL
 # #鏡新聞
 #     - name: Get yt_mnews.m3u8
