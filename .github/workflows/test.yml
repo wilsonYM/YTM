@@ -22,9 +22,9 @@ jobs:
       run: |
         sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         sudo chmod a+rx /usr/local/bin/yt-dlp
-    # - name: Install PyExecJS
-    #   run: |
-    #     pip install PyExecJS
+    - name: Install PyExecJS
+      run: |
+        pip install PyExecJS
     # - name: Install streamlink
     #   run: |
     #     pip install streamlink
@@ -36,6 +36,9 @@ jobs:
         sudo cat >./test.txt <<EOL
         鏡新聞,$(yt-dlp --print urls https://www.youtube.com/@mnews-tw/live)
         飢餓遊戲,$(yt-dlp --print urls https://www.youtube.com/@HungerGames123/live)
+        蠟筆小新,$(python3 ./bilibili.py 26329057)
+        蠟筆小新,$(python3 ./bilibili.py 10375360)
+        蠟筆小新,$(python3 ./bilibili.py 27178028)
         EOL
 # #鏡新聞
 #     - name: Get yt_mnews.m3u8
