@@ -1,4 +1,5 @@
 #EXTM3U
 #EXT-X-VERSION:3
 #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-https://d1--ov-gotcha105.bilivideo.com/live-bvc/107260/live_22486606_44457168.m3u8?expires=1681017278&len=0&oi=346768966&pt=web&qn=10000&trid=1003379200b0736e44488fcf107717e7c783&sigparams=cdn,expires,len,oi,pt,qn,trid&cdn=ov-gotcha105&sign=d4c5096212fcd9f356e4cd095ad12423&sk=7157c68cc1d15de506d88789910d23c6&p2p_type=0&sl=5&free_type=0&mid=0&pp=rtmp&source=onetier&trace=0&site=a6fc004481a13eea7f5220db2c1add12&order=1
+Exception： bilibili 26706595 未开播
+False
