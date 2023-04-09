@@ -1,4 +1,4 @@
 #EXTM3U
 #EXT-X-VERSION:3
 #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-https://al.flv.huya.com/src/1199525704786-1199525704786-7218833880368326318-2399051533028-10057-A-1680765947-1.flv?wsSecret=9ca140d2bb0ec83c6b200fc55df22a33&wsTime=643418b1&seqid=153877611808816810493937950728&ctype=tars_mp&ver=1&txyp=a&fs=bgct&&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*-265_&t=103&ratio=0&u=1538776118088&t=103&sv=2110211124
+('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
