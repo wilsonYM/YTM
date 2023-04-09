@@ -18,13 +18,13 @@ jobs:
       run: |
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
-    - name: Install yt-dlp
-      run: |
-        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
-        sudo chmod a+rx /usr/local/bin/yt-dlp
-    - name: Install PyExecJS
-      run: |
-        pip install PyExecJS
+    # - name: Install yt-dlp
+    #   run: |
+    #     sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+    #     sudo chmod a+rx /usr/local/bin/yt-dlp
+    # - name: Install PyExecJS
+    #   run: |
+    #     pip install PyExecJS
     - name: Install streamlink
       run: |
         pip install streamlink
@@ -179,18 +179,38 @@ jobs:
 #         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
 #         $(yt-dlp --proxy SOCKS5://jdes6209:EgXe53xPNF@181.215.45.238:50101 -g https://www.youtube.com/watch?v=UK81GCw1KE8)
 #         EOL
-
-
+#我們這一家s
+    - name: Get yt_Our_family.m3u8
+      run: |
+        touch ./yt_Our_family.m3u8
+        sudo cat >./yt_Our_family.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(streamlink --default-stream best --stream-url https://www.youtube.com/watch?v=UK81GCw1KE8)
+        EOL
+#公視X
+    - name: Get yt_ptslivestream.m3u8
+      run: |
+        touch ./yt_ptslivestream.m3u8
+        sudo cat >./yt_ptslivestream.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(streamlink --default-stream best --stream-url https://www.youtube.com/@ptslivestream/live)
+        EOL
 ############################################################################################################
 ############################################bilbil##############################################################
-#蠟筆小新1s
-    - name: Get bilbil_Crayon_Shinchan1.m3u8
-      run: |
-        touch ./bilbil_Crayon_Shinchan1.m3u8
-        sudo cat >./bilbil_Crayon_Shinchan1.m3u8 <<EOL
-        #EXTM3U
-        $(streamlink --default-stream best --stream-url https://live.bilibili.com/26329057)
-        EOL
+# #蠟筆小新1s
+#     - name: Get bilbil_Crayon_Shinchan1.m3u8
+#       run: |
+#         touch ./bilbil_Crayon_Shinchan1.m3u8
+#         sudo cat >./bilbil_Crayon_Shinchan1.m3u8 <<EOL
+#         #EXTM3U
+#         #EXT-X-VERSION:3
+#         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+#         $(streamlink --default-stream best --stream-url https://live.bilibili.com/26329057)
+#         EOL
 # #蠟筆小新1
 #     - name: Get bilbil_Crayon_Shinchan1.m3u8
 #       run: |
