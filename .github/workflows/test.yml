@@ -28,6 +28,31 @@ jobs:
     - name: Install streamlink
       run: |
         pip install streamlink
+    - name: novpn
+      run: |
+        touch ./ip.txt
+        sudo cat >./test.txt <<EOL
+        $(curl ifconfig.me)
+        EOL
+        
+    - name: Install OpenVPN
+      run: |
+          sudo apt update
+          sudo apt install -y openvpn openvpn-systemd-resolved
+    - name: OpenVPN-Connect
+      uses: kota65535/github-openvpn-connect-action@v2.0.2
+      with:
+        config_file: .github/workflows/vpn.ovpn
+        username: ${{ secrets.OVPN_USERNAME }}
+        password: ${{ secrets.OVPN_PASSWORD }}
+        client_key: ${{ secrets.USER_KEY }}
+    - name: yvpn
+      run: |
+        touch ./ip.txt
+        sudo cat >./test.txt <<EOF
+        old____________________________________
+        $(curl ifconfig.me)
+        EOF
 ###########################################################################################   
 #test
     # - name: Get test.txt
