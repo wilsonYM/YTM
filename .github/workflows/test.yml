@@ -18,21 +18,19 @@ jobs:
       run: |
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
-    - name: Install yt-dlp
-      run: |
-        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
-        sudo chmod a+rx /usr/local/bin/yt-dlp
-    - name: Install PyExecJS
-      run: |
-        pip install PyExecJS
-    - name: Install streamlink
-      run: |
-        pip install streamlink
+    # - name: Install yt-dlp
+    #   run: |
+    #     sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+    #     sudo chmod a+rx /usr/local/bin/yt-dlp
+    # - name: Install PyExecJS
+    #   run: |
+    #     pip install PyExecJS
+    # - name: Install streamlink
+    #   run: |
+    #     pip install streamlink
     - name: novpn
       run: |
-        touch ./ip.txt
-        sudo cat >./test.txt <<EOL
-        $(curl ifconfig.me)
+        curl ifconfig.me
         EOL
         
     - name: Install OpenVPN
@@ -48,11 +46,8 @@ jobs:
         client_key: ${{ secrets.USER_KEY }}
     - name: yvpn
       run: |
-        touch ./ip.txt
-        sudo cat >./test.txt <<EOF
-        old____________________________________
-        $(curl ifconfig.me)
-        EOF
+        curl ifconfig.me
+        EOL
 ###########################################################################################   
 #test
     # - name: Get test.txt
