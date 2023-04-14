@@ -31,7 +31,6 @@ jobs:
     - name: novpn
       run: |
         curl ifconfig.me
-        EOL
         
     - name: Install OpenVPN
       run: |
@@ -47,7 +46,6 @@ jobs:
     - name: yvpn
       run: |
         curl ifconfig.me
-        EOL
 ###########################################################################################   
 #test
     # - name: Get test.txt
