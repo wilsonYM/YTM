@@ -43,6 +43,9 @@ jobs:
         username: ${{ secrets.OVPN_USERNAME }}
         password: ${{ secrets.OVPN_PASSWORD }}
         client_key: ${{ secrets.USER_KEY }}
+        script: |
+            cd go/to/directory
+            git pull
     - name: yvpn
       run: |
         curl ifconfig.me
