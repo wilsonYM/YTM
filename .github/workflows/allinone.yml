@@ -128,7 +128,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --proxy 123.205.34.233:80 -g https://www.youtube.com/@CtsTw/live)
+        $(yt-dlp -g https://www.youtube.com/@CtsTw/live)
         EOL
 #民視新聞
     - name: Get yt_FTV_News.m3u8
